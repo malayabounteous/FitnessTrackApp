@@ -1,0 +1,60 @@
+/* 🏋️ ADD WORKOUT STYLING */
+
+.form-card {
+  width: 100%;
+  max-width: 400px; /* Aligned with your Login card width */
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1); /* Glassmorphism match */
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: white;
+  font-weight: 700;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 5px;
+}
+
+/* Matching your Global Input Style */
+input, select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px;
+  color: rgb(207, 223, 227);
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #00e676 !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 📊 Grid for Duration & Calories */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* White calendar icon fix */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}

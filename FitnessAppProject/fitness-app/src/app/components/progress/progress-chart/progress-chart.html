@@ -1,0 +1,57 @@
+<body>
+    <div class="bg-overlay"></div>
+
+
+<div class="dashboard">
+  <h2 class="page-title">Your Progress Analytics 📈</h2>
+
+  <div class="charts-grid">
+    <div class="chart-card glass">
+      <h3>Weight Trend</h3>
+      <canvas #weightChart></canvas>
+    </div>
+
+    <div class="chart-card glass">
+      <h3>Calorie Balance (In vs Out)</h3>
+      <canvas #calorieChart></canvas>
+    </div>
+  </div>
+
+  <div class="weight-prediction glass" *ngIf="caloriesConsumed !== undefined">
+  <h3>Weight Prediction ⚖️</h3>
+  
+  <p *ngIf="(weightChange > 0)" style="color: #ff7043;">
+     Warning! At this rate, you are on track to gain <b>{{ weightChange }} kg</b> today.
+   
+  </p>
+
+  <p *ngIf="(weightChange < 0)" style="color: #00e676;">
+    Great job! You are on track to lose <b>{{ weightChange }} kg</b> today.
+  </p>
+</div>
+ 
+  <div class="log-container glass" style="margin-top: 30px;">
+    <h3>Recent Progress Logs</h3>
+    <table>
+      <thead>
+        <tr style="color: antiquewhite;">
+          <th>Date</th>
+          <th>Weight</th>
+          <th>Consumed</th>
+          <th>Burned</th>
+          <th>Net</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of progressData">
+          <td style="color: azure;">{{ p.date | date }}</td>
+          <td style="color: azure;">{{ p.weight }} kg</td>
+          <td style="color: #42a5f5;">{{ p.caloriesConsumed }} kcal</td>
+          <td style="color: #ff7043;">{{ p.caloriesBurned }} kcal</td>
+          <td style="color:bisque"><strong>{{ p.caloriesConsumed - p.caloriesBurned }}</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>

@@ -1,0 +1,85 @@
+/* 🏋️ WORKOUT LIST SPECIFIC STYLING */
+
+.log-container {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: white;
+}
+
+th {
+  padding: 15px;
+  border-bottom: 2px solid rgba(0, 230, 118, 0.3);
+  font-size: 13px;
+  color: #00e676; /* Global Green */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 15px;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.workout-type {
+  font-weight: 600;
+  color: #fff;
+}
+
+.highlight {
+  color: #00e676;
+  font-weight: bold;
+}
+
+.duration-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Status Badge */
+.completed-badge {
+  background: rgba(0, 230, 118, 0.1);
+  color: #00e676;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  border: 1px solid rgba(0, 230, 118, 0.3);
+}
+
+/* Small Button Fix */
+.small-btn {
+  width: auto !important;
+  margin-top: 0 !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+}
+
+.empty-msg {
+  text-align: center;
+  padding: 50px !important;
+  color: rgba(255, 255, 255, 0.4);
+}

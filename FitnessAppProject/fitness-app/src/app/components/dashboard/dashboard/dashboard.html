@@ -1,0 +1,86 @@
+<body>
+  
+<div class="bg-overlay"></div>
+
+<div class="navbar">
+  <div class="logo">💪 FitnessTrack</div>
+  <div class="nav-links">
+    
+    <a routerLink="/profile">Profile</a>
+  </div>
+  <button class="logout" (click)="logout()">Logout</button>
+</div>
+
+<div class="dashboard">
+  <div class="dashboard-header">
+    <h2 class="title" style="color: aliceblue;">Welcome Back! ⚡</h2>
+    <div class="quick-actions">
+      <button class="action-btn" routerLink="/add-meal">+ Meal</button>
+      <button class="action-btn workout" routerLink="/add-workout">+ Workout</button>
+    </div>
+  </div>
+
+  <div class="cards-container">
+    <div class="summary-card consumed">
+      <div class="card-icon">🍎</div>
+      <div class="card-info">
+        <h3>Calories Consumed</h3>
+        <p class="value">{{caloriesConsumed}} <small>kcal</small></p>
+      </div>
+      <div class="progress-bar"><div [style.width.%]="(caloriesConsumed/3000)*100"></div></div>
+    </div>
+
+    <div class="summary-card burned">
+      <div class="card-icon">🔥</div>
+      <div class="card-info">
+        <h3>Calories Burned</h3>
+        <p class="value">{{caloriesBurned}} <small>kcal</small></p>
+      </div>
+      <div class="progress-bar"><div [style.width.%]="(caloriesBurned/1000)*100"></div></div>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    
+    <div class="section glass">
+      <div class="section-header">
+        <h3 style="color: aliceblue;">🏋️ Recent Workouts</h3>
+        <a routerLink="/workouts" class="view-all">View All</a>
+      </div>
+      <div class="list-container">
+        <div *ngFor="let w of workouts" class="item workout-item">
+          <div class="item-left">
+            <span class="activity-type">{{w.type}}</span>
+            <span class="activity-date">{{w.date | date:'shortDate'}}</span>
+          </div>
+          <div class="item-right">
+            <span class="duration">{{w.duration}}m</span>
+            <span class="calories-tag">-{{w.caloriesBurned}}</span>
+          </div>
+        </div>
+        <p *ngIf="workouts.length === 0" class="empty-state">No workouts logged today.</p>
+      </div>
+    </div>
+
+    <div class="section glass">
+      <div class="section-header">
+        <h3 style="color: antiquewhite;">🍽️ Recent Meals</h3>
+        <a routerLink="/meals" class="view-all">View All</a>
+      </div>
+      <div class="list-container">
+        <div *ngFor="let m of meals" class="item meal-item">
+          <div class="item-left">
+            <span class="meal-name">{{m.name}}</span>
+            <span class="meal-type">{{m.mealType}}</span>
+          </div>
+          <div class="item-right">
+            <span class="calories-tag highlight">+{{m.calories}}</span>
+          </div>
+        </div>
+        <p *ngIf="meals.length === 0" class="empty-state">No meals logged today.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>

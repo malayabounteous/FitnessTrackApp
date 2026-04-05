@@ -1,0 +1,92 @@
+/* 🔐 LOGIN BOX */
+.container {
+  width: 100%;
+  max-width: 380px;
+  padding: 40px;
+  border-radius: 24px;
+
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  /* Modern Border & Shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* 🟢 Heading */
+h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+/* 🟢 Inputs */
+input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder color */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Input Focus Glow */
+input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 230, 118, 0.5); /* Matching your green theme */
+  box-shadow: 0 0 10px rgba(0, 230, 118, 0.2);
+}
+
+/* 🟢 Button */
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  /* Vibrant Green Gradient */
+  background: linear-gradient(135deg, #00e676, #00c853);
+  color: #000; /* Dark text on bright button looks more modern */
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 230, 118, 0.4);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* 📱 Small Screen Tweak */
+@media (max-width: 400px) {
+  .container {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+}

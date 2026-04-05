@@ -1,0 +1,43 @@
+
+<body>
+  
+<div class="bg-overlay"></div>
+<div class="auth-wrapper">
+  <div class="container">
+    <h2 style="color: aliceblue;">Register</h2>
+
+    <input [(ngModel)]="user.name" placeholder="Name">
+    <input [(ngModel)]="user.email" placeholder="Email">
+    <input [(ngModel)]="user.password" type="password" placeholder="Password">
+    
+    <input [(ngModel)]="user.age" type="number" placeholder="Age">
+    <input [(ngModel)]="user.height" type="number" placeholder="Height (cm)">
+    <input [(ngModel)]="user.weight" type="number" placeholder="Weight (kg)">
+
+    <button 
+  (click)="register()"
+  style="
+    background: linear-gradient(135deg, #00e676 0%, #00c853 100%);
+    color: #000;
+    font-weight: 700;
+    padding: 12px 28px;
+    margin-top:12px ;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+    outline: none;
+  "
+  onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0, 230, 118, 0.4)';"
+  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 230, 118, 0.3)';"
+>
+  Register
+</button>
+  </div>
+</div>
+</body>

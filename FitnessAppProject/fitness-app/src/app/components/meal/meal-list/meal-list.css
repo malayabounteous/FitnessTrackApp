@@ -1,0 +1,80 @@
+/* 🥗 MEAL LOGS SPECIFIC STYLING */
+
+.log-container {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-row {
+  color: antiquewhite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* 📊 Table Styling */
+.table-wrapper {
+  overflow-x: auto; /* Handles small screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: white;
+}
+
+th {
+  padding: 15px;
+  border-bottom: 2px solid rgba(0, 230, 118, 0.3);
+  font-size: 14px;
+  color: #00e676;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 15px;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.meal-name {
+  font-weight: 600;
+}
+
+.highlight {
+  color: #00e676;
+  font-weight: bold;
+}
+
+/* Category Badge */
+.type-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Small Button Fix */
+.small-btn {
+  width: auto !important;
+  margin-top: 0 !important;
+  padding: 8px 20px !important;
+  font-size: 14px !important;
+}
+
+.empty-msg {
+  text-align: center;
+  padding: 40px !important;
+  color: rgba(255, 255, 255, 0.4);
+}

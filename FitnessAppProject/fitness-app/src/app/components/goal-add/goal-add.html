@@ -1,0 +1,51 @@
+
+<body>
+  <div class="bg-overlay"></div>
+
+<div class="auth-wrapper">
+  <div class="form-card">
+    <h2>Set New Goal 🎯</h2>
+
+    <form #goalForm="ngForm" (ngSubmit)="addGoal()">
+      
+      <div class="form-group">
+        <label>Goal Type</label>
+        <select name="goalType" [(ngModel)]="goal.goalType" style="color: rgb(59, 48, 48);" required>
+          <option value="" disabled selected>Select goal type</option>
+          <option value="Weight Loss">Weight Loss</option>
+          <option value="Muscle Gain">Muscle Gain</option>
+          <option value="Daily Steps">Daily Steps</option>
+          <option value="Calorie Limit">Calorie Limit</option>
+          <option value="Workout Frequency">Workout Frequency</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Target Value (kg, steps, etc.)</label>
+        <input 
+          type="number" 
+          name="targetValue" 
+          [(ngModel)]="goal.targetValue" 
+          required 
+          placeholder="Enter target number">
+      </div>
+
+      <div class="date-grid">
+        <div class="form-group">
+          <label>Start Date</label>
+          <input type="date" name="startDate" [(ngModel)]="goal.startDate" required>
+        </div>
+        <div class="form-group">
+          <label>End Date</label>
+          <input type="date" name="endDate" [(ngModel)]="goal.endDate" required>
+        </div>
+      </div>
+
+      <button type="submit" class="primary-btn" [disabled]="goalForm.invalid">
+        Set Goal
+      </button>
+
+    </form>
+  </div>
+</div>
+</body>

@@ -1,0 +1,32 @@
+<div class="bg-overlay"></div>
+
+<div class="dashboard-wrapper">
+  <div class="ai-container glass">
+    
+    <div class="ai-header">
+      <div class="ai-icon-circle">
+        <span class="ai-icon">🤖</span>
+      </div>
+      <div class="header-text">
+        <h2>AI Fitness Advisor</h2>
+        <p class="subtitle">Personalized Diet & Activity Strategy</p>
+      </div>
+    </div>
+
+    <div class="ai-content">
+      <div *ngIf="isLoading" class="loader-box">
+        <div class="spinner"></div>
+        <p>Analyzing your caloric trends...</p>
+      </div>
+
+      <div *ngIf="!isLoading" class="text-box">
+        <div class="formatted-response" [innerHTML]="recommendationHtml"></div>
+      </div>
+    </div>
+
+    <div class="ai-footer">
+      <p>⚠️ <strong>Disclaimer:</strong> This is an automated insight. Consult a healthcare professional before starting a new diet or exercise regime.</p>
+    </div>
+    
+  </div>
+</div>

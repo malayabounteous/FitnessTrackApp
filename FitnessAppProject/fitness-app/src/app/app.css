@@ -1,0 +1,119 @@
+/* 🏗️ Layout Wrapper to push footer to bottom */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Takes full screen height */
+}
+
+.content {
+  flex: 1; /* Pushes the footer down */
+}
+
+/* 🧊 Glassmorphism Footer */
+.footer-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 60px 0 20px 0;
+  margin-top: 80px;
+  color: #fff;
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #00e676;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  color: #00e676;
+}
+
+/* 📱 Social Icons Placeholder */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+}
+
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-item {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+/* Hover Effect: Text turns green and adds a tiny shadow */
+.social-item:hover {
+  color: #00e676;
+  transform: translateX(5px);
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.4);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+}
+/* Responsive adjust */
+@media (max-width: 768px) {
+  .footer-content {
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+}

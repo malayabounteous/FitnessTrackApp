@@ -1,0 +1,99 @@
+/* 🎯 GOAL LOGS STYLING */
+
+.log-container {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05); /* Match global card alpha */
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: white;
+}
+
+th {
+  padding: 15px;
+  border-bottom: 2px solid rgba(0, 230, 118, 0.3);
+  font-size: 13px;
+  color: #00e676; /* Fitness Green accent */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 15px;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.goal-type {
+  font-weight: 600;
+  color: #fff;
+}
+
+.highlight {
+  color: #00e676;
+  font-weight: bold;
+}
+/* Base Badge Style */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+/* 🟡 In Progress - Yellow/Gold Theme */
+.status-badge.in-progress {
+  background: rgba(255, 193, 7, 0.1); /* Transparent Yellow */
+  color: #ffc107;
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+/* 🟢 Completed - Original Green Theme */
+.status-badge.completed {
+  background: rgba(0, 230, 118, 0.1); /* Transparent Green */
+  color: #00e676;
+  border-color: rgba(0, 230, 118, 0.3);
+}
+
+/* Highlight Target Value always green to show it's a positive target */
+.highlight {
+  color: #00e676;
+  font-weight: bold;
+}
+/* Utility button override */
+.small-btn {
+  width: auto !important;
+  margin-top: 0 !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+}
+
+.empty-msg {
+  text-align: center;
+  padding: 50px !important;
+  color: rgba(255, 255, 255, 0.4);
+}

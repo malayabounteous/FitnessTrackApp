@@ -1,0 +1,43 @@
+
+<body>
+    <div class="bg-overlay"></div>
+
+<div class="dashboard">
+  <div class="log-container glass">
+    <div class="header-row">
+      <h2 style="color: antiquewhite;">Workout History 🏋️</h2>
+      <button class="primary-btn small-btn" routerLink="/add-workout">+ Add Workout</button>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Activity Type</th>
+            <th>Duration</th>
+            <th>Energy Burned</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let w of workouts">
+            <td>{{ w.date | date:'MMM d, y' }}</td>
+            <td class="workout-type">{{ w.type }}</td>
+            <td>
+              <span class="duration-text">{{ w.duration }} mins</span>
+            </td>
+            <td class="highlight">{{ w.caloriesBurned }} kcal</td>
+            <td>
+              <span class="completed-badge">Completed</span>
+            </td>
+          </tr>
+          <tr *ngIf="workouts.length === 0">
+            <td colspan="5" class="empty-msg">No workouts found. Time to break a sweat!</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>

@@ -1,0 +1,63 @@
+<body>
+  
+
+<div class="bg-overlay"></div>
+
+<div class="navbar">
+  <div class="logo">💪 FitnessTrack</div>
+  <div class="nav-links">
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/add-meal">Add Meal</a>
+    <a routerLink="/add-workout">Add Workout</a>
+    <a routerLink="/add-goal">Add Goal</a>
+  </div>
+</div>
+
+<div class="profile-container">
+  <div class="profile-hero">
+    <div class="avatar-wrapper">
+      <div class="avatar-ring"></div>
+      <img src="guy2.png" alt="Profile" class="avatar-image">
+    </div>
+    <h1>Welcome, {{ userName }}</h1>
+    <p class="user-status">Consistency is Key • Member since 2026</p>
+  </div>
+
+  <div class="grid">
+    <div class="card" routerLink="/meals">
+      <div class="card-glow"></div>
+      <span class="card-icon">🍽️</span>
+      <span class="card-title">Meals</span>
+      <p>View your meal logs</p>
+    </div>
+
+    <div class="card" routerLink="/workouts">
+      <div class="card-glow"></div>
+      <span class="card-icon">🏋️</span>
+      <span class="card-title">Workouts</span>
+      <p>View workout history</p>
+    </div>
+
+    <div class="card" routerLink="/progress">
+      <div class="card-glow"></div>
+      <span class="card-icon">📊</span>
+      <span class="card-title">Progress</span>
+      <p>Track your fitness journey</p>
+    </div>
+
+    <div class="card" routerLink="/goals">
+      <div class="card-glow"></div>
+      <span class="card-icon">🎯</span>
+      <span class="card-title">Goals</span>
+      <p>Manage your goals</p>
+    </div>
+
+    <div class="card ai-card" routerLink="/recommendation">
+      <div class="card-glow"></div>
+      <span class="card-icon">🤖</span>
+      <span class="card-title">AI Advisor</span>
+      <p>Smart diet suggestions</p>
+    </div>
+  </div>
+</div>
+</body>

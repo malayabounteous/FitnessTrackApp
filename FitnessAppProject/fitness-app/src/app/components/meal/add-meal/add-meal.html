@@ -1,0 +1,57 @@
+<body>
+  <div class="bg-overlay"></div>
+
+<div class="auth-wrapper">
+  <div class="form-card">
+    <h2>Add Meal 🍴</h2>
+
+    <form #mealForm="ngForm" (ngSubmit)="addMeal()">
+      
+      <div class="form-group">
+        <label>Meal Name</label>
+        <input type="text" name="name" [(ngModel)]="meal.name" required placeholder="e.g. Chicken Salad">
+      </div>
+
+      <div class="form-group">
+        <label>Meal Type</label>
+        <select name="mealType" [(ngModel)]="meal.mealType" style="color: black;" required>
+          <option value="" disabled selected>Select type</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
+          <option value="Snack">Snack</option>
+        </select>
+      </div>
+
+      <div class="nutrition-grid">
+        <div class="form-group">
+          <label>Calories</label>
+          <input type="number" name="calories" [(ngModel)]="meal.calories" required>
+        </div>
+        <div class="form-group">
+          <label>Protein (g)</label>
+          <input type="number" name="protein" [(ngModel)]="meal.protein">
+        </div>
+        <div class="form-group">
+          <label>Carbs (g)</label>
+          <input type="number" name="carbs" [(ngModel)]="meal.carbs">
+        </div>
+        <div class="form-group">
+          <label>Fats (g)</label>
+          <input type="number" name="fats" [(ngModel)]="meal.fats">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" name="date" [(ngModel)]="meal.date" required>
+      </div>
+
+      <button type="submit" class="primary-btn" [disabled]="mealForm.invalid">
+        Save Meal
+      </button>
+
+    </form>
+  </div>
+</div>
+</body>

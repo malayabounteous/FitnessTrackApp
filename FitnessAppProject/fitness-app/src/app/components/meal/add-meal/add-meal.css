@@ -1,0 +1,73 @@
+/* 🥗 ADD MEAL COMPONENT STYLING */
+
+.form-card {
+    margin-top:80px;
+   margin-bottom: 20px;
+  width: 100%;
+  max-width: 480px; /* Slightly wider for the grid */
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+.form-group {
+
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 3px;
+  padding-left: 2px;
+}
+
+/* Force consistency with your global input style */
+input, select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px;
+  color: rgb(201, 222, 223);
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #00e676 !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 📊 2x2 Grid for Nutrition */
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+/* Chrome/Safari fix for date input icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Makes the calendar icon white */
+  cursor: pointer;
+}
+
+/* Mobile Tweak */
+@media (max-width: 400px) {
+  .nutrition-grid {
+    grid-template-columns: 1fr;
+  }
+}

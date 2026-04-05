@@ -1,0 +1,97 @@
+/* 🏠 HOME CONTAINER */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Full screen height */
+  width: 100%;
+  padding: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* 🏆 MAIN TITLE */
+.title {
+  font-size: 64px; /* Big and bold */
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #fff, #00e676);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -2px;
+}
+
+/* 📝 SUBTITLE */
+.subtitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 500px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* 🔘 BUTTON GROUP */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* ⚡ SHARED BUTTON STYLE */
+.btn {
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50px; /* Pill shape */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 🟢 LOGIN BUTTON (Primary) */
+.btn.login {
+  background: #00e676;
+  color: #000;
+  box-shadow: 0 10px 20px rgba(0, 230, 118, 0.3);
+}
+
+.btn.login:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 230, 118, 0.5);
+  background: #00ff84;
+}
+
+/* ⚪ REGISTER BUTTON (Secondary/Outline) */
+.btn.register {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.btn.register:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  transform: scale(1.05);
+}
+
+/* 📱 RESPONSIVE STUFF */
+@media (max-width: 600px) {
+  .title {
+    font-size: 42px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ✨ SMOOTH APPEARANCE */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

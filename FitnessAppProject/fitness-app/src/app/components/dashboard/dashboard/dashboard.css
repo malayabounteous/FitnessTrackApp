@@ -1,0 +1,161 @@
+/* 🚀 PRO DASHBOARD STYLING */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  text-align: left !important;
+  margin-bottom: 0 !important;
+  font-size: 28px !important;
+}
+
+/* Quick Action Buttons */
+.quick-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.action-btn:hover {
+  background: white;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.action-btn.workout {
+  background: #00e676;
+  color: black;
+  border: none;
+}
+
+/* 📊 Summary Cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.summary-card {
+  padding: 25px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  color:beige;
+}
+
+.card-icon {
+  font-size: 32px;
+  background: rgba(255,255,255,0.05);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+}
+
+.card-info h3 {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 5px;
+}
+
+.card-info .value {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.card-info small { font-size: 14px; opacity: 0.6; }
+
+/* Progress Bars inside cards */
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.consumed .progress-bar div { background: #42a5f5; height: 100%; border-radius: 10px; }
+.burned .progress-bar div { background: #00e676; height: 100%; border-radius: 10px; }
+
+/* ⚡ Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 25px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.view-all {
+  font-size: 13px;
+  color: #00e676;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* List Items Enhancement */
+.item {
+  color: azure;
+  background: rgba(240, 230, 230, 0.03) !important;
+  border: 1px solid rgba(234, 221, 221, 0.05) !important;
+  padding: 12px 18px !important;
+}
+
+.item-left { display: flex; flex-direction: column; }
+
+.activity-type, .meal-name { font-weight: 600; font-size: 15px; }
+
+.activity-date, .meal-type { 
+  font-size: 12px; 
+  color: rgba(255,255,255,0.4); 
+}
+
+.calories-tag {
+  font-family: 'Monaco', monospace;
+  font-weight: bold;
+  color: #ff5252;
+}
+
+.calories-tag.highlight { color: #00e676; }
+
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  color: rgba(255,255,255,0.3);
+  font-size: 14px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .dashboard-grid, .cards-container {
+    grid-template-columns: 1fr;
+  }
+}

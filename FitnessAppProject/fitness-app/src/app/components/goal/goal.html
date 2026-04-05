@@ -1,0 +1,45 @@
+<body>
+  <div class="bg-overlay"></div>
+
+
+<div class="dashboard">
+  <div class="log-container glass">
+    <div class="header-row">
+      <h2 style="color: antiquewhite;">Active Goals 🎯</h2>
+      <button class="primary-btn small-btn" routerLink="/add-goal">+ New Goal</button>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Goal Type</th>
+            <th>Target Value</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let g of goals">
+            <td class="goal-type">{{ g.goalType }}</td>
+            <td class="highlight">{{ g.targetValue }}</td>
+            <td>{{ g.startDate | date:'mediumDate' }}</td>
+            <td>{{ g.endDate | date:'mediumDate' }}</td>
+            <td>
+              <span class="status-badge" 
+                    [ngClass]="isExpired(g.endDate) ? 'completed' : 'in-progress'">
+                {{ isExpired(g.endDate) ? 'Completed' : 'In Progress' }}
+              </span>
+            </td>
+          </tr>
+          
+          <tr *ngIf="goals.length === 0">
+            <td colspan="5" class="empty-msg">No goals set. Define your targets to stay motivated!</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
