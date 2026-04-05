@@ -11,8 +11,8 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-   // @Value("${app.jwt.secret}")
-    private String  secret="malayasahumalayasahumalayasahumalayasahumalayasahu2004malaya2004";
+    @Value("${app.jwt.secret}")
+    private String  secret;
 
     private Key key= Keys.hmacShaKeyFor(secret.getBytes());
 
